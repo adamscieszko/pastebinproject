@@ -4,5 +4,15 @@
     <h1>{{ object }}</h1>
     <p>Syntax: {{ object.get_syntax_display }}<br />
     Date: {{ object.timestamp|date:"r" }}</p>
-    <code><pre>{{ object.content }}</pre></code>
+    <code><pre name="code" class="brush: {{ object.get_syntax_display|lower }}">{{ object.content }}</pre></code>
+    <link type="text/css" rel="stylesheet" href="/static/css/shCoreDjango.css" />
+    <script type="text/javascript" src="/static/js/shCore.js"></script>
+    <script type="text/javascript" src="/static/js/shBrushCss.js"></script>
+    <script type="text/javascript" src="/static/js/shBrushJScript.js"></script>
+    <script type="text/javascript" src="/static/js/shBrushPython.js"></script>
+    <script type="text/javascript" src="/static/js/shBrushSql.js"></script>
+    <script type="text/javascript" src="/static/js/shBrushXml.js"></script>
+    <script type="text/javascript">
+        SyntaxHighlighter.all();
+    </script>
 {% endblock %}
